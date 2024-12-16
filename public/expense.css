@@ -1,0 +1,821 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0c1d232e;
+    background: url('background.jpeg') no-repeat center center fixed;
+    background-size: cover;
+    color: #333;
+}
+
+h1, h2 {
+    font-family: 'Times New Roman', Times, serif;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 40px;
+    color: #1f023e;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+    white-space: nowrap;
+    animation: runningText 10s linear infinite, colorChange 10s linear infinite
+
+}
+@keyframes colorChange {
+    0% {
+        color: #6200ff; 
+    }
+    25% {
+        color: #301902; 
+    }
+    50% {
+        color: #01042a; 
+    }
+    75% {
+        color: #200224; 
+    }
+    100% {
+        color: #340521; 
+    }
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 15px;
+}
+
+.row {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.col-md-4 {
+    flex: 0 0 30%;
+    margin-right: 20px;
+}
+
+.col-md-8 {
+    flex: 0 0 65%;
+}
+
+.form-group {
+  background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    max-width: 350px;
+    margin: 20px auto;
+}
+
+.form-group label {
+    display: block;
+    margin: 10px 0 5px;
+    font-weight: bold;
+}
+
+.form-group input,
+.form-group select {
+    width: 90%;
+    padding: 10px;
+    margin-bottom: 16px;
+    font-size: 1em;
+    border: 1px solid #dce1e1;
+    background-color: #b8bcbe;
+    color: #0f0f0f;
+    border-radius: 5px;
+}
+
+@property --pos-x {
+    syntax: '<percentage>';
+    initial-value: 11.14%;
+    inherits: false;
+  }
+  
+  @property --pos-y {
+    syntax: '<percentage>';
+    initial-value: 140%;
+    inherits: false;
+  }
+  
+  @property --spread-x {
+    syntax: '<percentage>';
+    initial-value: 150%;
+    inherits: false;
+  }
+  
+  @property --spread-y {
+    syntax: '<percentage>';
+    initial-value: 180.06%;
+    inherits: false;
+  }
+  
+  @property --color-1 {
+    syntax: '<color>';
+    initial-value: #000;
+    inherits: false;
+  }
+  
+  @property --color-2 {
+    syntax: '<color>';
+    initial-value: #08012C;
+    inherits: false;
+  }
+  
+  @property --color-3 {
+    syntax: '<color>';
+    initial-value: #4E1E40;
+    inherits: false;
+  }
+  
+  @property --color-4 {
+    syntax: '<color>';
+    initial-value: #70464E;
+    inherits: false;
+  }
+  
+  @property --color-5 {
+    syntax: '<color>';
+    initial-value: #88394C;
+    inherits: false;
+  }
+  
+  @property --stop-1 {
+    syntax: '<percentage>';
+    initial-value: 37.35%;
+    inherits: false;
+  }
+  
+  @property --stop-2 {
+    syntax: '<percentage>';
+    initial-value: 61.36%;
+    inherits: false;
+  }
+  
+  @property --stop-3 {
+    syntax: '<percentage>';
+    initial-value: 78.42%;
+    inherits: false;
+  }
+  
+  @property --stop-4 {
+    syntax: '<percentage>';
+    initial-value: 89.52%;
+    inherits: false;
+  }
+  
+  @property --stop-5 {
+    syntax: '<percentage>';
+    initial-value: 100%;
+    inherits: false;
+  }
+  
+  .form-group button {
+    border-radius: 10px;
+    padding: 10px 32px;
+      min-width: 120px;
+      width:90%;
+    font-size: 16px;
+      line-height: 1;
+    font-weight: 500;
+      font-family: inherit;
+    color: white;
+    position: relative;
+    cursor: pointer;
+      appearance: none;
+      transition: background-color 0.3s ease;
+      --fancy-button-gradient-0: #8d49fd;
+      --fancy-button-gradient-50: #7f56f3;
+      --fancy-button-gradient-100: #5691f3;
+      --fancy-button-inner-shadow-top: rgba(233, 209, 255, 0.2);
+      --fancy-button-inner-shadow-top-lg: rgba(9, 12, 60, 0.1);
+      --fancy-button-inner-shadow-bottom: rgba(137, 222, 246, 0.3);
+      --fancy-button-shine-top: #e9d1ff;
+      --fancy-button-shine-bottom: #adfff9;
+      color: #fff;
+    background-image: linear-gradient(
+      to bottom,
+      var(--fancy-button-gradient-0) 0%,
+      var(--fancy-button-gradient-50) 50%,
+      var(--fancy-button-gradient-100) 100%
+    );
+    box-shadow:
+      0px 4px 12px rgba(9, 12, 60, 0.15),
+      0px 2px 8px rgba(9, 12, 60, 0.15),
+      0px 1px 3px var(--fancy-button-inner-shadow-top-lg),
+      inset 0px 1px 1px var(--fancy-button-inner-shadow-top),
+      inset 0px -1px 3px var(--fancy-button-inner-shadow-bottom);
+  }
+  
+  .form-group button:hover {
+    --pos-x: 0%;
+    --pos-y: 91.51%;
+    --spread-x: 120.24%;
+    --spread-y: 103.18%;
+    
+    --color-1: #C96287;
+    --color-2: #C66C64;
+    --color-3: #CC7D23;
+    --color-4: #37140A;
+    --color-5: #000;
+    
+    --stop-1: 0%;
+    --stop-2: 8.8%;
+    --stop-3: 21.44%;
+    --stop-4: 71.34%;
+    --stop-5: 85.76%;
+  }
+  
+  small {
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 32px;
+      letter-spacing: .05px;
+      text-decoration: none;
+      display: block;
+      text-align: center;
+      font-size: 13px;
+      font-weight: 400;
+      color: rgba(255, 255, 255, .2);
+  }
+  
+  small a {
+      font-weight: 500;
+      color: rgba(255, 255, 255, .4);
+  }
+
+    
+button, .btn {
+    background-color: #10011e;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 15px;
+    font-size: 14px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+#show-leaderboard-btn{
+  transition: background-color 0.3s ease;
+  --fancy-button-gradient-0: #8d49fd;
+  --fancy-button-gradient-50: #7f56f3;
+  --fancy-button-gradient-100: #5691f3;
+  --fancy-button-inner-shadow-top: rgba(233, 209, 255, 0.2);
+  --fancy-button-inner-shadow-top-lg: rgba(9, 12, 60, 0.1);
+  --fancy-button-inner-shadow-bottom: rgba(137, 222, 246, 0.3);
+  --fancy-button-shine-top: #e9d1ff;
+  --fancy-button-shine-bottom: #adfff9;
+  color: #fff;
+background-image: linear-gradient(
+  to bottom,
+  var(--fancy-button-gradient-0) 0%,
+  var(--fancy-button-gradient-50) 50%,
+  var(--fancy-button-gradient-100) 100%
+);
+box-shadow:
+  0px 4px 12px rgba(9, 12, 60, 0.15),
+  0px 2px 8px rgba(9, 12, 60, 0.15),
+  0px 1px 3px var(--fancy-button-inner-shadow-top-lg),
+  inset 0px 1px 1px var(--fancy-button-inner-shadow-top),
+  inset 0px -1px 3px var(--fancy-button-inner-shadow-bottom);
+}
+button:hover {
+    background-color: #100110;
+    transform: translateY(-2px);
+}
+
+button:focus {
+    outline: 2px solid #78056b;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+button:disabled {
+    background-color: #41034e;
+    cursor: not-allowed;
+}
+
+.premium-btn-container {
+    text-align: center;
+    margin: 20px auto;
+}
+
+.purchase-btn {
+  margin: 20px auto; 
+  padding: 10px 30px;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  font-weight: bold;
+  color: #fff;
+  cursor: not-allowed;
+  text-align: center; 
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.purchase-btn:hover {
+    background-color: #e0a800;
+    transform: translateY(-2px);
+}
+@import url("https://fonts.googleapis.com/css2?family=Inter:opsz,wght@14..32,500&display=swap");
+
+:root {
+  --shiny-cta-bg: #000000;
+  --shiny-cta-bg-subtle: #1a1818;
+  --shiny-cta-fg: #ffffff;
+  --shiny-cta-highlight: blue;
+  --shiny-cta-highlight-subtle: #070756;
+}
+
+@property --gradient-angle {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@property --gradient-angle-offset {
+  syntax: "<angle>";
+  initial-value: 0deg;
+  inherits: false;
+}
+
+@property --gradient-percent {
+  syntax: "<percentage>";
+  initial-value: 5%;
+  inherits: false;
+}
+
+@property --gradient-shine {
+  syntax: "<color>";
+  initial-value: white;
+  inherits: false;
+}
+#purchase {
+      --animation: gradient-angle linear infinite;
+  --duration: 3s;
+  --shadow-size: 2px;
+  isolation: isolate;
+  position: relative;
+  overflow: hidden;
+  cursor: pointer;
+  outline-offset: 4px;
+  display: block; 
+    margin: 20px auto; 
+    padding: 10px 30px;
+    border: none;
+    border-radius: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    cursor: not-allowed;
+    text-align: center; 
+  border: 1px solid transparent;
+  border-radius: 360px;
+  color: var(--shiny-cta-fg);
+  background: linear-gradient(var(--shiny-cta-bg), var(--shiny-cta-bg))
+      padding-box,
+    conic-gradient(
+        from calc(var(--gradient-angle) - var(--gradient-angle-offset)),
+        transparent,
+        var(--shiny-cta-highlight) var(--gradient-percent),
+        var(--gradient-shine) calc(var(--gradient-percent) * 2),
+        var(--shiny-cta-highlight) calc(var(--gradient-percent) * 3),
+        transparent calc(var(--gradient-percent) * 4)
+      )
+      border-box;
+  box-shadow: inset 0 0 0 1px var(--shiny-cta-bg-subtle);
+
+}
+
+&::before,
+&::after,
+span::before {
+  content: "";
+  pointer-events: none;
+  position: absolute;
+  inset-inline-start: 50%;
+  inset-block-start: 50%;
+  translate: -50% -50%;
+  z-index: -1;
+}
+
+&:active {
+  translate: 0 1px;
+}
+
+#purchase::before {
+--size: calc(100% - var(--shadow-size) * 3);
+--position: 2px;
+--space: calc(var(--position) * 2);
+width: var(--size);
+height: var(--size);
+background: radial-gradient(
+    circle at var(--position) var(--position),
+    white calc(var(--position) / 4),
+    transparent 0
+  )
+  padding-box;
+background-size: var(--space) var(--space);
+background-repeat: space;
+mask-image: conic-gradient(
+  from calc(var(--gradient-angle) + 45deg),
+  black,
+  transparent 10% 90%,
+  rgb(6, 18, 68)
+);
+border-radius: inherit;
+opacity: 0.4;
+z-index: -1;
+}
+
+/* Inner shimmer */
+#purchase::after {
+--animation: shimmer linear infinite;
+width: 100%;
+aspect-ratio: 1;
+background: linear-gradient(
+  -50deg,
+  transparent,
+  var(--shiny-cta-highlight),
+  transparent
+);
+mask-image: radial-gradient(circle at bottom, transparent 40%, rgb(9, 9, 123));
+opacity: 0.6;
+}
+
+#purchase span {
+z-index: 1;
+
+&::before {
+  --size: calc(100% + 1rem);
+  width: var(--size);
+  height: var(--size);
+  box-shadow: inset 0 -1ex 2rem 4px var(--shiny-cta-highlight);
+  opacity: 0;
+}
+}
+
+/* Animate */
+#purchase {
+--transition: 800ms cubic-bezier(0.25, 1, 0.5, 1);
+transition: var(--transition);
+transition-property: --gradient-angle-offset, --gradient-percent,
+  --gradient-shine;
+
+&,
+&::before,
+&::after {
+  animation: var(--animation) var(--duration),
+    var(--animation) calc(var(--duration) / 0.4) reverse paused;
+  animation-composition: add;
+}
+
+span::before {
+  transition: opacity var(--transition);
+  animation: calc(var(--duration) * 1.5) breathe linear infinite;
+}
+}
+
+#purchase:is(:hover, :focus-visible) {
+--gradient-percent: 30%;
+--gradient-angle-offset: 95deg;
+--gradient-shine: var(--shiny-cta-highlight-subtle);
+
+&,
+&::before,
+&::after {
+  animation-play-state: running;
+}
+
+span::before {
+  opacity: 1;
+}
+}
+
+@keyframes gradient-angle {
+to {
+  --gradient-angle: 360deg;
+}
+}
+
+@keyframes shimmer {
+to {
+  rotate: 360deg;
+}
+}
+
+@keyframes breathe {
+from,
+to {
+  scale: 1;
+}
+50% {
+  scale: 1.2;
+}
+}
+
+#purchase:hover {
+  background-image: conic-gradient(
+  #0a1f41,
+  #033c33,
+  #535b0b,
+  #54370b,
+  #4a0639,
+  #0f0a49,
+  #051c42
+  );
+}
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #1e1e1e; 
+    color: #e0e0e0; 
+}
+
+th {
+    padding: 12px;
+    text-align: center;
+    transition: background-color 0.3s ease;
+    --fancy-button-gradient-0: #8d49fd;
+    --fancy-button-gradient-50: #7f56f3;
+    --fancy-button-gradient-100: #5691f3;
+    --fancy-button-inner-shadow-top: rgba(233, 209, 255, 0.2);
+    --fancy-button-inner-shadow-top-lg: rgba(9, 12, 60, 0.1);
+    --fancy-button-inner-shadow-bottom: rgba(137, 222, 246, 0.3);
+    --fancy-button-shine-top: #e9d1ff;
+    --fancy-button-shine-bottom: #adfff9;
+    color: #fff;
+  background-image: linear-gradient(
+    to bottom,
+    var(--fancy-button-gradient-0) 0%,
+    var(--fancy-button-gradient-50) 50%,
+    var(--fancy-button-gradient-100) 100%
+  );
+  box-shadow:
+    0px 4px 12px rgba(9, 12, 60, 0.15),
+    0px 2px 8px rgba(9, 12, 60, 0.15),
+    0px 1px 3px var(--fancy-button-inner-shadow-top-lg),
+    inset 0px 1px 1px var(--fancy-button-inner-shadow-top),
+    inset 0px -1px 3px var(--fancy-button-inner-shadow-bottom);
+    color: #fff; 
+    border-right: 1px solid #444; 
+}
+
+td {
+    padding: 10px;
+    margin-left: 5px;
+    text-align: center;
+    background-color: #ffffff; 
+    border-bottom: 1px solid #444;
+    border-right: 1px solid #444; 
+    color:#000;
+    border-radius: 8px;
+    
+
+}
+
+td:last-child, th:last-child {
+    border-right: none;
+}
+
+
+tr:hover td {
+    background-color: #888383;
+}
+
+button.delete-btn, button.edit-btn {
+    padding: 5px 10px;
+    margin: 0 5px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.delete-btn {
+    background: linear-gradient(to right, #460c08, #9b1c0e);
+    &:hover {
+        background: linear-gradient(to right, #3d0302, #7b1c07);
+    }
+}
+
+.edit-btn {
+    background: linear-gradient(to right, #0e0328c4, #240798);
+    &:hover {
+        background: linear-gradient(to right, #15063c, #4248b3);
+    }
+}
+
+.leaderboard-container {
+    position: absolute;
+    top: 20px;          
+    right: 20px;        
+    padding: 1em;
+    border-radius: 8px;
+    z-index: 1000;      
+    max-width: 350px;    
+    width: 100%;
+    height: 400px;      
+    overflow-y: auto;    
+    box-shadow: 0 0 20px rgba(0,0,0,0.2);
+}
+
+.leaderboard-table {
+    width: 100%;
+    border-collapse: collapse;
+    overflow: hidden;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(0,0,0,0.1);
+}
+
+.leaderboard-table th {
+    background-color: #250238;
+    color: #efeaea; 
+}
+
+.leaderboard-table td {
+    padding: 10px;
+    border: 1px solid #4b4747;
+    background-color: #ffffff;
+    color: #101010; 
+}
+
+.leaderboard-table tbody tr:nth-child(even) {
+    background-color: #c94565; 
+}
+
+.leaderboard-table tbody tr:hover {
+    background-color: #b73e5c; 
+    cursor: pointer;
+}
+#expense-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px auto;
+    max-width: 600px;
+}
+
+#expense-list li {
+    background: #fff;
+    margin: 10px 0;
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: space-between;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    margin: 20px auto;
+}
+
+.pagination button {
+    margin: 5px;
+    background-color: #0b021b;
+    color: white;
+    padding: 8px 12px;
+}
+
+.pagination button:hover {
+    background-color: #3f00b3;
+}
+
+.pagination button:disabled {
+    background-color: #484242;
+}
+
+#download-expenses {
+    display: block;
+    margin: 20px auto;
+    padding: 10px 20px;
+    background-image: linear-gradient(92.83deg, #bd1c90 0%, #1f00ff 100%);
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer; transition: background-color 0.3s ease;
+    --fancy-button-gradient-0: #8d49fd;
+    --fancy-button-gradient-50: #7f56f3;
+    --fancy-button-gradient-100: #5691f3;
+    --fancy-button-inner-shadow-top: rgba(233, 209, 255, 0.2);
+    --fancy-button-inner-shadow-top-lg: rgba(9, 12, 60, 0.1);
+    --fancy-button-inner-shadow-bottom: rgba(137, 222, 246, 0.3);
+    --fancy-button-shine-top: #e9d1ff;
+    --fancy-button-shine-bottom: #adfff9;
+    color: #fff;
+  background-image: linear-gradient(
+    to bottom,
+    var(--fancy-button-gradient-0) 0%,
+    var(--fancy-button-gradient-50) 50%,
+    var(--fancy-button-gradient-100) 100%
+  );
+  box-shadow:
+    0px 4px 12px rgba(9, 12, 60, 0.15),
+    0px 2px 8px rgba(9, 12, 60, 0.15),
+    0px 1px 3px var(--fancy-button-inner-shadow-top-lg),
+    inset 0px 1px 1px var(--fancy-button-inner-shadow-top),
+    inset 0px -1px 3px var(--fancy-button-inner-shadow-bottom);
+}
+
+#download-expenses:hover {
+    background-color: #5200b3;
+    transform: translateY(-2px);
+}
+
+#download-expenses:disabled {
+    background-color: #777;
+}
+
+
+#refresh-history-btn {
+    background-color: #260251;
+    transform: translateY(-2px);
+    display: block;
+    margin: 10px auto;
+    text-align: center;
+  }
+  
+ 
+  #refresh-history-btn:hover {
+    background-color: rgb(15, 12, 173); 
+    transform: translateY(-2px);
+  }
+  
+  .text-center {
+    text-align: center;
+    margin-top: 20px;
+  }
+  
+  #ui2 {
+    border: 1px solid #070707;
+    width: 60%;
+    box-shadow: #070707;
+    margin: 10px auto;
+    background-color: #f9f9f9;
+    font-family: Arial, sans-serif;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.2);
+  }
+  
+  #ui2 th, #ui2 td {
+    padding: 12px;
+    text-align: center;
+  }
+  
+  #ui2 th {
+    background-color: #6c757d; 
+    color: white;
+    text-transform: uppercase;
+    font-size: 14px;
+  }
+  
+  #ui2 tr:nth-child(even) {
+    background-color: #f2f2f2;
+  }
+  
+  #ui2 tr:hover {
+    background-color: #d1e7dd; 
+    cursor: pointer;
+  }
+
+  .page{
+    font-family: Arial, sans-serif;
+    font-size: 30px;
+    font-weight: bold;
+    color: #333; /* Dark gray */
+    margin-right: 10px;
+  }
+
+  .form-select {
+    padding: 10px 20px;
+    font-size: 14px;
+    border: 1px solid #ccc; 
+    border-radius: 5px;
+    background-color: #fff; 
+    color: #333;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+
+.form-select:focus {
+    outline: none;
+    border-color: #007bff; 
+    box-shadow: 0 0 5px rgba(0, 123, 255, 0.5);
+}
+
+.form-select:hover {
+    border-color: #007bff; 
+}
+
+.form-select-sm {
+    padding: 8px 8px;
+    font-size: 12px;
+}
+
+.rows-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 0; 
+    gap: 10px;
+}

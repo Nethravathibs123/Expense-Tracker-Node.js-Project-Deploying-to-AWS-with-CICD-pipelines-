@@ -1,0 +1,4 @@
+::1 - - [16/Dec/2024:21:09:28 +0000] "GET /favicon.ico HTTP/1.1" 404 150 "http://localhost:3000/login.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
+::1 - - [16/Dec/2024:21:09:30 +0000] "POST /user/login HTTP/1.1" 200 161 "http://localhost:3000/login.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
+::1 - - [16/Dec/2024:21:09:30 +0000] "GET /expenses/getdownload HTTP/1.1" 304 - "http://localhost:3000/expense.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
+::1 - - [16/Dec/2024:21:09:30 +0000] "GET /expenses?page=1&limit=5 HTTP/1.1" 304 - "http://localhost:3000/expense.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"

@@ -1,17 +1,32 @@
 {
-  "name": "expenseproject",
+  "name": "expensetrackerapp",
   "version": "1.0.0",
-  "description": "nodecomplete",
+  "description": "node.js complete",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Netha",
+  "author": "Nethra",
   "license": "ISC",
+  "devDependencies": {
+    "nodemon": "^3.1.9"
+  },
   "dependencies": {
+    "@getbrevo/brevo": "^1.0.1",
+    "aws-sdk": "^2.1692.0",
+    "bcryptjs": "^2.4.3",
+    "body-parser": "^1.20.3",
+    "cors": "^2.8.5",
+    "dotenv": "^16.4.7",
+    "express": "^4.21.2",
+    "express-handlebars": "^8.0.1",
     "helmet": "^8.0.0",
+    "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
-    "mysql2": "^3.11.3",
-    "sequelize": "^6.37.5"
+    "mysql2": "^3.11.5",
+    "pug": "^3.0.3",
+    "razorpay": "^2.9.5",
+    "sequelize": "^6.37.5",
+    "uuid": "^11.0.3"
   }
 }
