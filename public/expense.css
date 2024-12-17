@@ -782,8 +782,9 @@ button.delete-btn, button.edit-btn {
     font-family: Arial, sans-serif;
     font-size: 30px;
     font-weight: bold;
-    color: #333; /* Dark gray */
+    color: #0b0a0a; 
     margin-right: 10px;
+    
   }
 
   .form-select {
@@ -810,7 +811,8 @@ button.delete-btn, button.edit-btn {
 
 .form-select-sm {
     padding: 8px 8px;
-    font-size: 12px;
+    font-size: 13px;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 
 .rows-container {
