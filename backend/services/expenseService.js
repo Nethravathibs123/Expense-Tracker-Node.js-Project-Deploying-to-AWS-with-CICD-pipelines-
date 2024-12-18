@@ -58,7 +58,6 @@ function uploadToS3(data, filename) {
     };
   };
   
-  
   exports.addExpense = async (userId, expenseData) => {
     const { amount, description, category } = expenseData;
   
