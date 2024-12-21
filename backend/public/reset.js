@@ -1,6 +1,4 @@
 
-
-
 const forgetPasswordForm = document.getElementById("forget-password-form");
 const errorMsg = document.getElementById('error');
 

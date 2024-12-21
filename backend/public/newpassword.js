@@ -17,7 +17,7 @@ function handleSubmit(e) {
         return;
     }
 
-    axios.post(`http://localhost:5000/password/resetpassword/${token}`, { password: p1 })
+    axios.post(`http://184.73.149.88:5000/password/resetpassword/${token}`, { password: p1 })
         .then(response => {
             if (response.status === 200) {
                 alert('Password reset successful');
