@@ -17,11 +17,11 @@ function handleSubmit(e) {
         return;
     }
 
-    axios.post(`http://localhost:5000/password/resetpassword/${token}`, { password: p1 })
+    axios.post(`http://184.73.149.88:5000/password/resetpassword/${token}`, { password: p1 })
         .then(response => {
             if (response.status === 200) {
                 alert('Password reset successful');
-                window.location.href = 'http://localhost:5000/login.html';
+                window.location.href = 'http://184.73.149.88:5000/login.html';
             } else {
                 document.getElementById("mydiv").innerText = response.data.message || 'An unexpected error occurred';
             }
