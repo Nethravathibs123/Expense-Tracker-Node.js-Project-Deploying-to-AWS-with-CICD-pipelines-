@@ -1,0 +1,2 @@
+::1 - - [21/Dec/2024:13:34:55 +0000] "GET /password/resetpassword/f82ff872-3f91-4a46-94a8-6646fb217034 HTTP/1.1" 500 42 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+::1 - - [21/Dec/2024:13:34:55 +0000] "GET /favicon.ico HTTP/1.1" 404 283 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
