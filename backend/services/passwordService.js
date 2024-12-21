@@ -58,7 +58,7 @@ exports.resetpassword = async (req, res) => {
     const t = await sequelize.transaction();
     try {
         const token = req.params.token;
-        console.log(`Reset Password Request ID: ${id}`);
+        console.log(`Reset Password Request ID: ${token}`);
         const forgotpasswordrequest = await Forgotpassword.findOne({ where: {reset_token: id }, transaction: t });
 
         if (!forgotpasswordrequest) {
