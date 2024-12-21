@@ -36,10 +36,16 @@ app.use((req, res, next) => {
 });
 app.use(morgan('combined', { stream: accessLogStream }));
 
-app.use('/user', userRoutes);
+app.use('/user', userRoutes); 
 app.use('/expenses', expenseRoutes); 
 app.use('/premium', premiumRoutes);
-app.use('/password', passwordRoutes);
+app.use('/password', passwordRoutes);  
+app.use('/', (req, res) => {
+    console.log("url" + req.url);
+    console.log(path.join(__dirname, `public/${req.url}`));
+
+    res.sendFile(path.join(__dirname, `public${req.url}`));
+});
 
 Users.hasMany(Expense, { foreignKey: 'userId' });
 Expense.belongsTo(Users, { foreignKey: 'userId' });
@@ -53,9 +59,9 @@ ForgetPassword.belongsTo(Users,{foreignKey:'userId'});
 Users.hasMany(downloadhistory,{foreignKey:'userId'});
 downloadhistory.belongsTo(Users,{foreignKey:"userId"});
 
-
+{force : true}
 sequelize.sync()
-.then((result) => {
+.then(() => {
     app.listen(process.env.PORT,()=>{
         console.log("Database is on  And Server is listing on 3000");
     })
