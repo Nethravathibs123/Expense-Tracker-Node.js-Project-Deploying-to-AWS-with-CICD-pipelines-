@@ -20,15 +20,7 @@ function handleSubmit(e) {
     axios.post(`http://184.73.149.88:5000/password/resetpassword/${token}`, { password: p1 })
         .then(response => {
             if (response.status === 200) {
-                alert(response.data.message);
-                const formHtml = `
-                <form action="${response.data.resetFormAction}" method="get">
-                    <label for="newpassword">Enter New Password</label>
-                    <input name="newpassword" type="password" required>
-                    <button>Reset Password</button>
-                </form>
-            `;
-            document.getElementById("reset-form-container").innerHTML = formHtml;
+                alert('Password reset successful');
                 window.location.href = 'http://184.73.149.88:5000/login.html';
             } else {
                 document.getElementById("mydiv").innerText = response.data.message || 'An unexpected error occurred';
