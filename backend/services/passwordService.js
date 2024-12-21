@@ -59,7 +59,7 @@ exports.resetpassword = async (req, res) => {
     try {
         const token = req.params.token;
         console.log(`Reset Password Request ID: ${token}`);
-        const forgotpasswordrequest = await Forgotpassword.findOne({ where: {reset_token: id }, transaction: t });
+        const forgotpasswordrequest = await Forgotpassword.findOne({ where: {reset_token: token }, transaction: t });
 
         if (!forgotpasswordrequest) {
             throw new Error('Invalid reset password request');
@@ -70,7 +70,7 @@ exports.resetpassword = async (req, res) => {
 
         return { status: 200, success: true, html: `
             <html>
-                <form action="/password/updatepassword/${id}" method="get">
+                <form action="/password/updatepassword/${token}" method="get">
                     <label for="newpassword">Enter New Password</label>
                     <input name="newpassword" type="password" required></input>
                     <button>Reset Password</button>
