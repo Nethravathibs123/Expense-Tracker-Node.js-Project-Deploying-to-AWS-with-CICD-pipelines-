@@ -58,11 +58,16 @@ exports.resetpassword = async (req, res) => {
     const t = await sequelize.transaction();
     try {
         const id = req.params.id;
+        console.log(`Reset Password Request ID: ${id}`);
         const forgotpasswordrequest = await Forgotpassword.findOne({ where: { id }, transaction: t });
 
         if (!forgotpasswordrequest) {
             throw new Error('Invalid reset password request');
         }
+        if (forgotpasswordrequest.isactive !== 'ACTIVE') {
+            throw new Error('This reset password request is no longer valid.');
+        }
+
         return { status: 200, success: true, html: `
             <html>
                 <form action="/password/updatepassword/${id}" method="get">
