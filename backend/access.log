@@ -1,1 +1,6 @@
+<<<<<<< HEAD
 ::ffff:49.37.162.64 - - [22/Dec/2024:18:59:01 +0000] "POST /password/forgotpassword HTTP/1.1" 200 55 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
+=======
+::1 - - [22/Dec/2024:18:59:20 +0000] "GET /password/resetpassword/027b17ef-2d67-4c08-b75f-f6d5519c702e HTTP/1.1" 200 374 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+::1 - - [22/Dec/2024:18:59:27 +0000] "GET /password/updatepassword/027b17ef-2d67-4c08-b75f-f6d5519c702e?newpassword=Nethra%401 HTTP/1.1" 403 49 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+>>>>>>> 693773945874e9935fd0233dbfb35c5c97b7b19f
