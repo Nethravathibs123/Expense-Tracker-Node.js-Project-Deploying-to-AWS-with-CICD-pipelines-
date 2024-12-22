@@ -1,1 +1,2 @@
-::1 - - [22/Dec/2024:12:35:36 +0000] "GET /password/resetpassword/1eb7340a-97c7-4e54-9627-52a64f6d11cb HTTP/1.1" 500 89 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+::1 - - [22/Dec/2024:12:43:31 +0000] "GET /favicon.ico HTTP/1.1" 404 283 "http://localhost:3000/login.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
+::1 - - [22/Dec/2024:12:44:31 +0000] "GET /password/resetpassword/8a93a4dd-b6eb-4325-a4b8-64a08c62c92b HTTP/1.1" 500 89 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
