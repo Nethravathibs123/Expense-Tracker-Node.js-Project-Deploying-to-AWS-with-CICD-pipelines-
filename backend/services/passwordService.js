@@ -105,7 +105,10 @@ exports.updatepassword = async (req, res) => {
         const hash = await bcrypt.hash(newpassword, salt);
 
         await user.update({ password: hash }, { transaction: t });
-                await t.commit();
+        await Forgotpassword.update({ isactive: false }, { where: { id: resetpasswordid }, transaction: t });
+
+        await t.commit();
+
 
         return { status: 201, message: 'Successfully updated the new password', success: true };
     } catch (error) {
