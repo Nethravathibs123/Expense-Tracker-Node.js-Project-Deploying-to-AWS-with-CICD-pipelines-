@@ -60,11 +60,6 @@ exports.resetpassword = async (req, res) => {
         const id = req.params.id;
         const forgotpasswordrequest = await Forgotpassword.findOne({ where: { id, isactive: true  }, transaction: t });
 
-        if (!forgotpasswordrequest) {
-            return {status:404, message: 'Reset password request not found or expired.' };
-        }
-        await forgotpasswordrequest.update({ isactive: false }, { transaction: t });
-
         return { status: 200, success: true, html: `
             <html>
                 <form action="/password/updatepassword/${id}" method="get">
