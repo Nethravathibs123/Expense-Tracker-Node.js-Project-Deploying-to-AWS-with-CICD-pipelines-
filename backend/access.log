@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 ::ffff:49.37.162.64 - - [22/Dec/2024:12:35:19 +0000] "POST /password/forgotpassword HTTP/1.1" 200 55 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
+=======
+::1 - - [22/Dec/2024:12:35:36 +0000] "GET /password/resetpassword/1eb7340a-97c7-4e54-9627-52a64f6d11cb HTTP/1.1" 500 89 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+>>>>>>> a58f5451fecc4df2d71433e51a20e484e1613b0b
