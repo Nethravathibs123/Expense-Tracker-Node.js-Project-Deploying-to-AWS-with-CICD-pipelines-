@@ -1,2 +1,7 @@
+<<<<<<< HEAD
 ::ffff:49.37.162.64 - - [22/Dec/2024:19:05:56 +0000] "POST /password/forgotpassword HTTP/1.1" 200 55 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
 ::ffff:205.210.31.227 - - [22/Dec/2024:19:07:58 +0000] "GET / HTTP/1.1" 404 294 "-" "Expanse, a Palo Alto Networks company, searches across the global IPv4 space multiple times per day to identify customers&#39; presences on the Internet. If you would like to be excluded from our scans, please send IP addresses/domains to: scaninfo@paloaltonetworks.com"
+=======
+::1 - - [22/Dec/2024:19:06:16 +0000] "GET /password/resetpassword/a512095f-2dd1-4449-b172-f3af15aac4bf HTTP/1.1" 200 374 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+::1 - - [22/Dec/2024:19:06:21 +0000] "GET /password/updatepassword/a512095f-2dd1-4449-b172-f3af15aac4bf?newpassword=Nethra%401 HTTP/1.1" 403 49 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+>>>>>>> 054d911c1831cdc687cf83685aa63cd458265cac
