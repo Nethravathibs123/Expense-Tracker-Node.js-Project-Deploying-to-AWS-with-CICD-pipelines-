@@ -85,7 +85,7 @@ exports.updatepassword = async (req, res) => {
         const { newpassword } = req.query;
         const { resetpasswordid } = req.params;
 
-        const resetpasswordrequest = await Forgotpassword.findOne({ where: { id: resetpasswordid }, transaction: t });
+        const resetpasswordrequest = await Forgotpassword.findOne({ where: { id: resetpasswordid, isactive: true  }, transaction: t });
         if (!resetpasswordrequest) {
             throw new Error('Invalid reset request');
         }
