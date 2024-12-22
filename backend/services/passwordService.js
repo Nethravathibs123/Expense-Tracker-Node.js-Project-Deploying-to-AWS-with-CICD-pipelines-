@@ -90,8 +90,12 @@ exports.updatepassword = async (req, res) => {
                 success: false
             }
         }
-        console.log("Reset Password ID:", resetpasswordid);
+        
         const resetpasswordrequest = await Forgotpassword.findOne({ where: { id: resetpasswordid, isactive: true  }, transaction: t });
+        if (!resetpasswordrequest) {
+            throw new Error('Invalid reset request');
+        }
+
         const user = await User.findOne({ where: { id: resetpasswordrequest.userId }, transaction: t });
         if (!user) {
             throw new Error('No user exists');
