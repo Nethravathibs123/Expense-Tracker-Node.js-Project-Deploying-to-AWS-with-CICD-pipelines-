@@ -1,3 +1,9 @@
+<<<<<<< HEAD
 ::ffff:49.37.162.64 - - [22/Dec/2024:12:25:37 +0000] "POST /password/forgotpassword HTTP/1.1" 500 33 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
 ::ffff:49.37.162.64 - - [22/Dec/2024:12:25:46 +0000] "POST /password/forgotpassword HTTP/1.1" 200 55 "http://localhost:3000/" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
 ::ffff:49.37.162.64 - - [22/Dec/2024:12:25:47 +0000] "GET /favicon.ico HTTP/1.1" 404 295 "http://184.73.149.88:3000/login.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
+=======
+::1 - - [22/Dec/2024:12:25:31 +0000] "GET /favicon.ico HTTP/1.1" 404 283 "http://localhost:3000/login.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
+::1 - - [22/Dec/2024:12:26:08 +0000] "GET /password/resetpassword/598a3bf4-8f16-4400-83e2-cda97bc89211 HTTP/1.1" 500 42 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+::1 - - [22/Dec/2024:12:26:08 +0000] "GET /favicon.ico HTTP/1.1" 404 283 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
+>>>>>>> 08ea62918ed2fbc724dca669abba4df86ec92ba5
