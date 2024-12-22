@@ -54,7 +54,7 @@ exports.forgotpassword = async (req, res) => {
     }
 };
 
-exports.resetpassword = async (req) => {
+exports.resetpassword = async (req, res) => {
     const t = await sequelize.transaction();
     try {
         const id = req.params.id;

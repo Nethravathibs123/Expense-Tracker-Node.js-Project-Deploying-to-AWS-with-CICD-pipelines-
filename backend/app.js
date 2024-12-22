@@ -59,8 +59,8 @@ ForgetPassword.belongsTo(Users,{foreignKey:'userId'});
 Users.hasMany(downloadhistory,{foreignKey:'userId'});
 downloadhistory.belongsTo(Users,{foreignKey:"userId"});
 
-
-sequelize.sync({force : true})
+//force : true
+sequelize.sync()
 .then(() => {
     app.listen(process.env.PORT,()=>{
         console.log("Database is on  And Server is listing on 3000");
