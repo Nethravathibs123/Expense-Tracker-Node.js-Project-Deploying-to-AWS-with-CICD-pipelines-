@@ -1,2 +1,5 @@
+<<<<<<< HEAD
 ::ffff:49.37.162.92 - - [24/Dec/2024:13:30:37 +0000] "GET /favicon.ico HTTP/1.1" 404 295 "http://184.73.149.88:3000/login.html" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
 ::ffff:49.37.162.92 - - [24/Dec/2024:13:31:07 +0000] "GET /favicon.ico HTTP/1.1" 404 295 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36 Edg/131.0.0.0"
+=======
+>>>>>>> af71747b1a1d3c5bfcb658ad42a4c6312ee8a8ce
