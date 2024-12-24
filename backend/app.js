@@ -23,8 +23,8 @@ const downloadhistory=require('./models/downloadhistory')
 const accessLogStream=fs.createWriteStream(path.join(__dirname,'access.log'),
 {flag:'a'} )
 
-
-app.use(express.static(path.join(__dirname, 'public')));
+app.get('/favicon.ico', (req, res) => res.status(204));
+app.use(express.static(path.join(__dirname, 'public'),{ maxAge: '1d' }));
 app.use(express.json());
 app.use(cors());
 app.use(bodyParser.json());
