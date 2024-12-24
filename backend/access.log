@@ -1,2 +1,0 @@
-::1 - - [24/Dec/2024:13:40:34 +0000] "GET /password/resetpassword/e1a9597e-bfba-4f6f-a718-7b4f6e57fcb8 HTTP/1.1" 200 374 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
-::1 - - [24/Dec/2024:13:40:40 +0000] "GET /password/updatepassword/e1a9597e-bfba-4f6f-a718-7b4f6e57fcb8?newpassword=Nethra%401 HTTP/1.1" 403 49 "-" "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/131.0.0.0 Safari/537.36"
