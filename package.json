@@ -1,7 +1,7 @@
 {
-  "name": "expensetrackerapp",
+  "name": "deployment",
   "version": "1.0.0",
-  "description": "node.js complete",
+  "description": "expense tracker app",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -23,10 +23,10 @@
     "helmet": "^8.0.0",
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
-    "mysql2": "^3.11.5",
+    "mysql2": "^3.12.0",
     "pug": "^3.0.3",
     "razorpay": "^2.9.5",
     "sequelize": "^6.37.5",
-    "uuid": "^11.0.3"
+    "uuid": "^11.0.4"
   }
 }
