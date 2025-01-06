@@ -19,9 +19,9 @@ const userRoutes = require('./routes/user');
 const expenseRoutes = require('./routes/expense'); 
 const premiumRoutes = require('./routes/purchase');
 const passwordRoutes = require('./routes/password');
-const downloadhistory=require('./models/downloadhistory')
-const accessLogStream=fs.createWriteStream(path.join(__dirname,'access.log'),
-{flag:'a'} )
+// const downloadhistory=require('./models/downloadhistory')
+// const accessLogStream=fs.createWriteStream(path.join(__dirname,'access.log'),
+// {flag:'a'} )
 
 app.get('/favicon.ico', (req, res) => res.status(204));
 app.use(express.static(path.join(__dirname, 'public'),{ maxAge: '1d' }));
@@ -34,7 +34,7 @@ app.use((req, res, next) => {
     res.setHeader("Content-Security-Policy", "script-src 'self' https://cdn.jsdelivr.net;");
     next();
 });
-app.use(morgan('combined', { stream: accessLogStream }));
+// app.use(morgan('combined', { stream: accessLogStream }));
 
 app.use('/user', userRoutes); 
 app.use('/expenses', expenseRoutes); 
