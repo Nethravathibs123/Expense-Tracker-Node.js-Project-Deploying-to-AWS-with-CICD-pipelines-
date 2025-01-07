@@ -1,18 +1,18 @@
 {
-  "name": "deployment",
+  "name": "expensetrackerapp",
   "version": "1.0.0",
-  "description": "expense tracker app",
+  "description": "Node.js complete",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-  "author": "Nethra",
+  "author": "",
   "license": "ISC",
   "devDependencies": {
     "nodemon": "^3.1.9"
   },
   "dependencies": {
-    "@getbrevo/brevo": "^1.0.1",
+    "@getbrevo/brevo": "^2.2.0",
     "aws-sdk": "^2.1692.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.20.3",
@@ -24,7 +24,6 @@
     "jsonwebtoken": "^9.0.2",
     "morgan": "^1.10.0",
     "mysql2": "^3.12.0",
-    "pug": "^3.0.3",
     "razorpay": "^2.9.5",
     "sequelize": "^6.37.5",
     "uuid": "^11.0.4"
