@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker App</title>
+    <link rel="stylesheet" href="expense.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+</head>
+
+<body>   
+    <div class="container">
+        <h1 class="text-center">Expense Tracker App</h1>
+    </div>
+
+        <div class="form-group">
+            <label for="amount-input">Expense Amount:</label>
+            <input type="number" id="amount-input" aria-label="Enter expense amount">
+
+            <label for="description-input">Description:</label>
+            <input type="text" id="description-input" placeholder="Enter description">
+
+            <label for="category-select">Category:</label>
+            <select id="category-select">
+                <option value="Food & Beverage">Food & Beverage</option>
+                <option value="Fuel">Fuel</option>
+                <option value="Transport">Transport</option>
+                <option value="Salary">Salary</option>
+                <option value="Movie">Movie</option>
+            </select>
+            <button id="add-expense" class="btn btn-success">Add Expense</button>
+           
+        </div>
+
+        <div class="premium-btn-container text-center">
+            <button id="purchase-premium" class="purchase-btn btn btn-warning">
+              <span> Purchase Premium Membership</span> 
+            </button>
+            <button id="purchase" style="display: none;" class="btn btn-primary">
+                🌟You are a Premium User🌟
+            </button>
+        </div>
+
+      
+        <div class="leaderboard-container">
+            <h2>Leaderboard</h2>
+            <input id="show-leaderboard-btn" class="btn btn-info" type="button" value="Show Leaderboard">
+            <table class="leaderboard-table table">
+                <thead>
+                    <tr class="leaderboard-1">
+                        <th>Rank </th>
+                        <th>Username</th>
+                        <th>Total Expense</th>
+                    </tr>
+                </thead>
+                <tbody id="leaderboard-list"></tbody>
+            </table>
+        </div>
+
+        <div style="margin: 30px;">
+            
+            <div>
+                
+                <label for="rowsPerPage" class="page">Rows per page:</label>
+                <select id="rowsPerPage" class="form-select form-select-sm" >
+                    <option value="5">5</option>
+                    <option value="10">10</option>
+                    <option value="25">25</option>
+                    <option value="50">50</option>
+                    <option value="100">100</option>
+                </select>
+            </div>
+               <h1>Expenses</h1>
+            <table class="table table-striped">
+                <thead>
+                    <tr>
+                        <th>Expense Amount</th>
+                        <th>Description</th>
+                        <th>Category</th>
+                        <th>Action</th>
+                    </tr>
+                </thead>
+                <tbody id="expense-list"></tbody>
+            </table>
+<br>
+            <div class="button-container">
+                <button id="prevPageBtn">Previous</button>
+                <p id="pagination-info"></p>
+                <button id="nextPageBtn">Next</button>
+              </div>
+
+        <div class="text-center">
+            <button id="download-expenses" class="btn btn-secondary" >
+              <i class="fa-solid fa-download"></i>  Download Expenses
+            </button>
+        </div>
+    </div>
+
+    <table id="ui2"></table>
+    <button id="refresh-history-btn">Refresh Download History
+        <i class="fa-solid fa-rotate"></i>
+    </button>
+
+
+
+    <script src="https://checkout.razorpay.com/v1/checkout.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+    <script src="expense.js"></script>
+</body>
+</html>
