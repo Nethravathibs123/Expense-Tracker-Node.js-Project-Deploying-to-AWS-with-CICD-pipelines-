@@ -1,4 +1,3 @@
-
 const forgetPasswordForm = document.getElementById("forget-password-form");
 const errorMsg = document.getElementById('error');
 
@@ -12,6 +11,7 @@ forgetPasswordForm.addEventListener('submit', async (event) => {
         window.location.href = "http://184.73.149.88:3000/login.html";
     }  catch(error){
         console.log('Error adding user: ',error);
+        errorMsg.textContent = "Something went wrong. Please try again later.";
     }
 
 });

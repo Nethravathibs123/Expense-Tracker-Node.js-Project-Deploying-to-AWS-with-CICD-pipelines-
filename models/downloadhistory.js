@@ -1,4 +1,3 @@
-
 const sequelize=require('../util/database')
 const Sequelize=require('sequelize')
 

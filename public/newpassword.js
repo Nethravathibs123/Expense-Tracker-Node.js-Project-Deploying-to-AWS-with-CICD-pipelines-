@@ -1,3 +1,4 @@
+
 document.getElementById('form').addEventListener('submit', handleSubmit);
 
 console.log("In password reset handler");

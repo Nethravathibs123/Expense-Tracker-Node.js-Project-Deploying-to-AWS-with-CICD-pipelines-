@@ -1,4 +1,3 @@
-
 const signUpForm = document.getElementById("sign-up-form");
 const errorMsg = document.getElementById('error');
 const usernameInput = document.getElementById('username');

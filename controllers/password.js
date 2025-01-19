@@ -1,4 +1,3 @@
-
 const passwordService=require('../services/passwordService');
 
 module.exports.forgotpassword = async(req,res)=>{

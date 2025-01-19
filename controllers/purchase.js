@@ -1,4 +1,3 @@
-
 const purchaseService = require('../services/purchaseService');
 
 module.exports.purchaseMembership = async (req, res) => {
