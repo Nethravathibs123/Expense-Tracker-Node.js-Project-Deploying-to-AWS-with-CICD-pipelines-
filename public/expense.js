@@ -1,5 +1,3 @@
-
-
 document.addEventListener('DOMContentLoaded', function () {
     const elements = {
         expenseList: document.getElementById('expense-list'),
