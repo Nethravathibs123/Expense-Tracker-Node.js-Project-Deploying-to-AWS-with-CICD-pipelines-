@@ -308,8 +308,9 @@ document.addEventListener('DOMContentLoaded', function () {
       
           elements.downloadHistoryTable.innerHTML = ''; 
           response.data.forEach((item, index) => {
-            const { link } = item;
-            addHistory(index + 1, link);
+            const { link, totalExpense } = item;
+            const safeTotalExpense = totalExpense ?? 0; 
+            addHistory(index + 1, link, safeTotalExpense); 
           });
         } catch (error) {
           console.error('Error fetching download history:', error);
