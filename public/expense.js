@@ -262,7 +262,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <tr>
               <td>${index + 1}</td>
               <td>${user.username}</td>
-              <td>₹${user.totalExpense}</td>
+              <td>₹${totalExpense}</td>
             </tr>
                `;
           }).join('');
