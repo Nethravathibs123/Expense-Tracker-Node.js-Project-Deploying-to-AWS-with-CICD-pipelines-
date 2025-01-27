@@ -137,31 +137,25 @@ document.addEventListener('DOMContentLoaded', function () {
         if (currentPage > totalPages) {
           currentPage = totalPages;
         }
-        if (totalCount === 0) {
-          elements.paginationInfo.innerHTML = "No expenses to display.";
-          elements.expenseList.innerHTML = '<tr><td colspan="4">No expenses found.</td></tr>';
-          return;
-        }
+      
         elements.paginationInfo.innerHTML = `Page ${currentPage} of ${totalPages}`;
       
         elements.expenseList.innerHTML = ''; 
       
-        expenses.forEach((expense, index) => {
+        for (let i = 0; i < expenses.length; i++) {
+          const expense = expenses[i];
           const row = document.createElement('tr');
-          const sanitize = (str) => (str ? str.replace(/</g, "&lt;").replace(/>/g, "&gt;") : ""); // Sanitize input
-          const amount = expense.amount ?? 0; // Replace null with 0
-      
           row.innerHTML = `
-            <td>${amount}</td>
-            <td>${sanitize(expense.description) || "No description"}</td>
-            <td>${sanitize(expense.category)}</td>
+            <td>${expense.amount}</td>
+            <td>${expense.description || "No description"}</td>
+            <td>${expense.category}</td>
             <td>
               <button class="delete-btn" data-id="${expense.id}">Delete 🗑️</button>
-              <button class="edit-btn" data-index="${index}">Edit ✏️</button>
+              <button class="edit-btn" data-index="${i}">Edit ✏️</button>
             </td>
           `;
           elements.expenseList.appendChild(row);
-        });
+        }
       };
       
       
@@ -262,13 +256,16 @@ document.addEventListener('DOMContentLoaded', function () {
             headers: { Authorization: token },
           });
       
-          elements.leaderboardList.innerHTML = response.data.map((user, index) => `
+          elements.leaderboardList.innerHTML = response.data.map((user, index) => {
+            const totalExpense = user.totalExpense ?? 0;
+            return `
             <tr>
               <td>${index + 1}</td>
               <td>${user.username}</td>
               <td>₹${user.totalExpense}</td>
             </tr>
-          `).join('');
+               `;
+          }).join('');
         } catch (error) {
           console.error('Error fetching leaderboard:', error);
           alert('Failed to load leaderboard.');
