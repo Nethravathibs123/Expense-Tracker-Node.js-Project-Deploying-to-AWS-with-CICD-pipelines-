@@ -1,5 +1,3 @@
-
-
 const uuid = require('uuid');
 const { TransactionalEmailsApi, SendSmtpEmail, ApiClient } = require('@getbrevo/brevo');
 const bcrypt = require('bcryptjs');

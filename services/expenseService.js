@@ -1,4 +1,3 @@
-
 const Expense = require('../models/expense');
 const Users = require('../models/user');
 const sequelize = require('../util/database'); 
