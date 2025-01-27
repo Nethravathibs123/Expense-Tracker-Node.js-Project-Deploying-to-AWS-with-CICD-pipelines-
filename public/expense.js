@@ -137,7 +137,11 @@ document.addEventListener('DOMContentLoaded', function () {
         if (currentPage > totalPages) {
           currentPage = totalPages;
         }
-      
+        if (totalCount === 0) {
+          elements.paginationInfo.innerHTML = "No expenses to display.";
+          elements.expenseList.innerHTML = '<tr><td colspan="4">No expenses found.</td></tr>';
+          return;
+        }
         elements.paginationInfo.innerHTML = `Page ${currentPage} of ${totalPages}`;
       
         elements.expenseList.innerHTML = ''; 
