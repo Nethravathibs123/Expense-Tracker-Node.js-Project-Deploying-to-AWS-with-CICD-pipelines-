@@ -146,20 +146,22 @@ document.addEventListener('DOMContentLoaded', function () {
       
         elements.expenseList.innerHTML = ''; 
       
-        for (let i = 0; i < expenses.length; i++) {
-          const expense = expenses[i];
+        expenses.forEach((expense, index) => {
           const row = document.createElement('tr');
+          const sanitize = (str) => (str ? str.replace(/</g, "&lt;").replace(/>/g, "&gt;") : ""); // Sanitize input
+          const amount = expense.amount ?? 0; // Replace null with 0
+      
           row.innerHTML = `
-            <td>${expense.amount}</td>
-            <td>${expense.description || "No description"}</td>
-            <td>${expense.category}</td>
+            <td>${amount}</td>
+            <td>${sanitize(expense.description) || "No description"}</td>
+            <td>${sanitize(expense.category)}</td>
             <td>
               <button class="delete-btn" data-id="${expense.id}">Delete 🗑️</button>
-              <button class="edit-btn" data-index="${i}">Edit ✏️</button>
+              <button class="edit-btn" data-index="${index}">Edit ✏️</button>
             </td>
           `;
           elements.expenseList.appendChild(row);
-        }
+        });
       };
       
       
