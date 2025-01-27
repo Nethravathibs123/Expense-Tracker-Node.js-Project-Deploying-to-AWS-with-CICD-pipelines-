@@ -79,10 +79,10 @@ exports.getUserLeaderBoard = async (req, res) => {
   try {
     
     const leaderboard = await Users.findAll({
-      attributes: [ 'id',  'username', [Sequelize.fn('SUM', Sequelize.col('expenses.amount')), 'totalExpense'] ],
+      attributes: [ 'id',  'username', ['COALESCE', Sequelize.fn(Sequelize.fn('SUM', Sequelize.col('expenses.amount')),0), 'totalExpense'] ],
       include: [{ model: Expense, attributes: [],}],
       group: ['user-detail.id'],  
-      order: [[Sequelize.fn('SUM', Sequelize.col('expenses.amount')), 'DESC']],  
+      order: [[Sequelize.literal('totalExpense'), 'DESC']], 
     }); 
     res.status(200).json(leaderboard);
   } catch (error) {
