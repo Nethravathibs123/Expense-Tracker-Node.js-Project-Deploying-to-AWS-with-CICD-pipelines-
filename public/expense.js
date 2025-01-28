@@ -257,7 +257,7 @@ document.addEventListener('DOMContentLoaded', function () {
           });
       
           elements.leaderboardList.innerHTML = response.data.map((user, index) => {
-            const totalExpense = user.totalExpense ?? 0;
+            const totalExpense = user.totalExpense !== null ? user.totalExpense : 0;
             return `
             <tr>
               <td>${index + 1}</td>

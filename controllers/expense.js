@@ -77,7 +77,6 @@ module.exports.getDownload = async (req, res, next) => {
 
 exports.getUserLeaderBoard = async (req, res) => {
   try {
-    
     const leaderboard = await Users.findAll({
       attributes: [ 'id',  'username', [Sequelize.fn('COALESCE', Sequelize.fn('SUM', Sequelize.col('expenses.amount')), 0), 'totalExpense']],
       group: ['Users.id'],  
