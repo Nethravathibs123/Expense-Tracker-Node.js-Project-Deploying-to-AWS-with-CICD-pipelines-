@@ -255,9 +255,10 @@ document.addEventListener('DOMContentLoaded', function () {
           const response = await axios.get('http://184.73.149.88:3000/expenses/showLeaderBoard', {
             headers: { Authorization: token },
           });
+          console.log(response.data);
       
           elements.leaderboardList.innerHTML = response.data.map((user, index) => {
-            const totalExpense = user.totalExpense !== null ? user.totalExpense : 0;
+            const totalExpense = user.totalExpense!== null ? user.totalExpense : 0;
             return `
             <tr>
               <td>${index + 1}</td>
